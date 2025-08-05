@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fbe9ef;
+    color: #63402C;
+    text-align: center;
+}
+
+header {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 240px;
+    height: auto;
+    display: block;
+}
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+    header img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 160px;
+    }
+}
+
+nav {
+    background-color: #63402C;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fbe9ef;
+}
+
+/* Responsive nav font size */
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 30px 15px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Align Content section text left */
+#content p {
+    text-align: left;
+}
+
+#content h3 {
+	font-size: 1.3em;
+}
+
+/* Order Now button section centered */
+#order-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.order-now-btn {
+    display: inline-block;
+    background-color: #8B5A3A; /* Slightly warmer brown for contrast */
+    color: white;
+    padding: 14px 36px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.order-now-btn:hover {
+    background-color: #6F3F28; /* Darker shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Email Signup styling */
+#signup {
+    padding-top: 10px;
+}
+
+.email-form {
+    background-color: #fff5f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.email-form form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #63402C;
+    border-radius: 5px;
+    width: 250px;
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #63402C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #4b2f20;
+}
+
+footer {
+    background-color: #63402C;
+    color: white;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0 10px 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.social-icons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fbe9ef;
+    transform: scale(1.15);
+}
+
+
+
+/* Gallery */
+.gallery-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Limits max width */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.gallery-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-slides img {
+    flex: 0 0 100%;
+    height: 300px;
+    object-fit: contain; /* Show full image without cropping */
+    background-color: #fbe9ef; /* Match site background */
+}
+
+
+
+.gallery-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #63402C; /* Brand brown */
+}

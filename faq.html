@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Knead & Crumbs</title>
+
+    <!-- Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header will load here -->
+    <div id="header"></div>
+
+    <!-- Content Section -->
+    <div class="section" id="content">
+        <h2>Frequently Asked Questions</h2>
+		<h3>Ordering & Availability</h3>
+		<p>
+			<b>When do preorders open and close?</b><br />
+			Preorders open on Tuesdays at 8 am and close on Thursdays at 5 pm or when we sell out (whichever comes first).<br />
+			<b>Do you take custom orders?</b><br />
+			Fill out our custom order inquiry form, and we’ll work out the details.<br />
+			<b>How far in advance should I order?</b><br />
+			For our regular menu drops, just follow the preorder schedule. For custom orders, we recommend at least 2–3 weeks' notice (more for large events).<br />
+			<b>Do you have a minimum order amount?</b><br />
+			Preorders have a $20 minimum. For custom or large event orders, minimums depend on the item.
+		</p>
+		<h3>Pick-Up & Delivery</h3>
+		<p>
+			<b>Do you offer delivery? If so, what areas do you deliver to?</b><br />
+			Yes! We offer local delivery within Simsbury included in the cost of your order.<br />
+			<b>What if I’m not from Simsbury?</b><br />
+			No worries! We offer pickup at a neutral location in Simsbury. Just DM or email us for the address to access the preorder form.
+		</p>
+		<h3>Menu & Products</h3>
+		<p>
+			<b>Do you have a set menu or rotating flavors?</b><br />
+			We have a few core items available regularly (like NY-style bagels, gourmet muffins and classic cookies) plus seasonal and limited-time flavors that change throughout the year.<br />
+			<b>Are your products nut-free/dairy-free/gluten-free?</b><br />
+			Our kitchen works with wheat, dairy, eggs, and nuts. While we are happy to try to accommodate certain requests, we cannot guarantee a completely allergen-free environment.<br />
+			<b>Do you offer vegan options?</b><br />
+			At this time, we don’t offer fully vegan baked goods, but we are always testing recipes—stay tuned!<br />
+			<b>Do your products contain allergens?</b><br />
+			Yes, many of our products contain common allergens like wheat, dairy, eggs, and soy. Each product will have ingredients listed so you can check before ordering.<br />
+			<b>Can you customize flavors, colors, or decorations?</b><br />
+			Absolutely! We love customizing treats to fit your vision. Just reach out via the custom order form.
+		</p>
+		<h3>Payment & Policies</h3>
+		<p>
+			<b>What payment methods do you accept?</b><br />
+			We accept credit/debit cards and other secure payment methods through our online order form.<br />
+			<b>Do you require payment in advance?</b><br />
+			Yes—payment is required at checkout to confirm your order.<br />
+			<b>What is your cancellation policy?</b><br />
+			For preorder items, cancellations must be made before the preorder closes. For custom orders, cancellations must be made at least 7 days in advance for a partial refund.<br />
+			<b>What is your refund policy?</b><br />
+			Because our baked goods are made fresh, we generally do not offer refunds. If there’s ever an issue with your order, please reach out—we want to make it right!<br />
+		</p>
+		<h3>Special Orders & Events</h3>
+		<p>
+			<b>Do you bake for weddings, birthdays, or special events?</b><br />
+			Yes! We’d love to help make your celebration sweeter. Fill out the custom order form, and we’ll create a menu for your event.<br />
+			<b>Do you offer catering or bulk orders?</b><br />
+			We do not offer catering due to CT cottage food laws but we can make bulk orders! Perfect for offices, brunches, parties, and holidays. Fill out the custom order form and we will contact you.<br />
+			<b>Do you provide treats for corporate events or gifts?</b><br />
+			Yes! We can package items beautifully for gifting or events. Realtors, event planners, and businesses—send us a message for details.
+		</p>
+		<h3>Other</h3>
+		<p>
+			<b>Do you ship your products?</b><br />
+			Not at this time—our baked goods are only available for local pickup and delivery in CT.<br />
+			<b>Are you licensed to sell baked goods?</b><br />
+			Yes! Knead & Crumbs, LLC operates under Connecticut’s Cottage Food Program, which allows us to bake and sell directly to our local community.<br />
+			<b>How can I join your mailing list?</b><br />
+			Easy! Sign up at the bottom of this page. You’ll be the first to know about preorder openings, seasonal flavors, and special offers.
+		</p>
+
+    </div>
+
+    <!-- Footer will load here -->
+    <div id="footer"></div>
+
+    <!-- JavaScript to load header/footer -->
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            document.getElementById(id).innerHTML = await response.text();
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+</html>
