@@ -89,6 +89,15 @@ h2 {
 	font-size: 1.3em;
 }
 
+@media (max-width: 768px) {
+    #content div[style*="float: left"] {
+        float: none !important;
+        margin: 0 auto 20px auto !important;
+        display: block;
+        max-width: 80% !important;
+    }
+}
+
 /* Order Now button section centered */
 #order-button {
     display: flex;
