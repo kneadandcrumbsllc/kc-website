@@ -20,32 +20,39 @@
 	<div class="section" id="content">
 		<h2>Gallery</h2>
 
-		<!-- Rotating Image Gallery -->
-		<div class="gallery-carousel">
-			<div class="gallery-slides">
-				<img src="img/gallery/1.jpg" alt="Everything Bagels">
-				<img src="img/gallery/2.jpg" alt="Chocolate Chip Cookies">
-				<img src="img/gallery/3.jpg" alt="Alexandra">
-				<img src="img/gallery/4.jpg" alt="Scott">
-				<img src="img/gallery/5.jpg" alt="Cookie Cake">
-				<img src="img/gallery/6.jpg" alt="Cupcakes">
-				<img src="img/gallery/7.jpg" alt="Marshmallow Treats">
-				<img src="img/gallery/8.jpg" alt="S'mores Bite">
-				<img src="img/gallery/9.jpg" alt="Plain Bagels">
-				<img src="img/gallery/10.jpg" alt="Cupcakes">
-				<img src="img/gallery/11.jpg" alt="Chocolate Coated Pretzels">
-				<img src="img/gallery/12.jpg" alt="Cookies">
-				<img src="img/gallery/13.jpg" alt="Cookies">
-				<img src="img/gallery/14.jpg" alt="Muffins">
-				<img src="img/gallery/15.jpg" alt="Crumb Cake">
-				<img src="img/gallery/16.jpg" alt="Bagels">
-				<img src="img/gallery/17.jpg" alt="Muffin">
-				<img src="img/gallery/18.jpg" alt="Cupcakes">
-			</div>
-			<!-- Navigation Dots -->
-			<div class="gallery-dots">
-			</div>
-		</div>
+                <!-- Rotating Image Gallery -->
+                <div class="gallery-carousel">
+                    <!-- Arrow Left -->
+                    <button class="gallery-arrow left">&#10094;</button>
+                    
+                    <div class="gallery-slides">
+                        <img src="img/gallery/1.jpg" alt="Everything Bagels">
+                        <img src="img/gallery/2.jpg" alt="Chocolate Chip Cookies">
+                        <img src="img/gallery/3.jpg" alt="Alexandra">
+                        <img src="img/gallery/4.jpg" alt="Scott">
+                        <img src="img/gallery/5.jpg" alt="Cookie Cake">
+                        <img src="img/gallery/6.jpg" alt="Cupcakes">
+                        <img src="img/gallery/7.jpg" alt="Marshmallow Treats">
+                        <img src="img/gallery/8.jpg" alt="S'mores Bite">
+                        <img src="img/gallery/9.jpg" alt="Plain Bagels">
+                        <img src="img/gallery/10.jpg" alt="Cupcakes">
+                        <img src="img/gallery/11.jpg" alt="Chocolate Coated Pretzels">
+                        <img src="img/gallery/12.jpg" alt="Cookies">
+                        <img src="img/gallery/13.jpg" alt="Cookies">
+                        <img src="img/gallery/14.jpg" alt="Muffins">
+                        <img src="img/gallery/15.jpg" alt="Crumb Cake">
+                        <img src="img/gallery/16.jpg" alt="Bagels">
+                        <img src="img/gallery/17.jpg" alt="Muffin">
+                        <img src="img/gallery/18.jpg" alt="Cupcakes">
+                    </div>
+
+                    <!-- Arrow Right -->
+                    <button class="gallery-arrow right">&#10095;</button>
+
+                    <!-- Navigation Dots -->
+                    <div class="gallery-dots"></div>
+                </div>
+
 	</div>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
@@ -54,7 +61,9 @@
 			const slides = document.querySelectorAll(".gallery-slides img");
 			const dotsContainer = document.querySelector(".gallery-dots");
 			const carousel = document.querySelector(".gallery-carousel");
-			let slideInterval = null; // Store single interval
+			const arrowLeft = document.querySelector(".gallery-arrow.left");
+			const arrowRight = document.querySelector(".gallery-arrow.right");
+			let slideInterval = null;
 
 			// Generate dots dynamically
 			slides.forEach((_, index) => {
@@ -63,7 +72,7 @@
 				if (index === 0) dot.classList.add("active");
 				dot.addEventListener("click", () => {
 					showSlide(index);
-					resetInterval(); // Reset on dot click
+					resetInterval();
 				});
 				dotsContainer.appendChild(dot);
 			});
@@ -71,26 +80,34 @@
 			const dots = document.querySelectorAll(".dot");
 
 			function showSlide(index) {
-			console.log(Date.now());
-				currentSlide = (index + slides.length) % slides.length; // Wrap index
+				currentSlide = (index + slides.length) % slides.length;
 				slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 				dots.forEach(dot => dot.classList.remove("active"));
 				dots[currentSlide].classList.add("active");
 			}
 
 			function startInterval() {
-				console.log('start');
-				clearInterval(slideInterval); // Prevent stacking
+				clearInterval(slideInterval);
 				slideInterval = setInterval(() => {
 					showSlide(currentSlide + 1);
 				}, 4000);
 			}
 
 			function resetInterval() {
-				console.log('reset');
 				clearInterval(slideInterval);
 				startInterval();
 			}
+
+			// Arrow navigation
+			arrowLeft.addEventListener("click", () => {
+				showSlide(currentSlide - 1);
+				resetInterval();
+			});
+
+			arrowRight.addEventListener("click", () => {
+				showSlide(currentSlide + 1);
+				resetInterval();
+			});
 
 			// Pause on hover
 			carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
@@ -100,6 +117,7 @@
 			startInterval();
 		});
 	</script>
+
 
     <!-- Footer will load here -->
     <div id="footer"></div>
