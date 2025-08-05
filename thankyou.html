@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Knead & Crumbs</title>
+
+    <!-- Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header will load here -->
+    <div id="header"></div>
+
+    <!-- Content Section -->
+    <div class="section" id="content">
+        <h2>Thank You</h2>
+        <p>You have successfully signed up for our mailing list. Look forward to the latest updates from Knead & Crumbs directly to your inbox.</p>
+    </div>
+
+    <!-- Footer will load here -->
+    <div id="footer"></div>
+
+    <!-- JavaScript to load header/footer -->
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            document.getElementById(id).innerHTML = await response.text();
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+</html>
