@@ -6,6 +6,23 @@ body {
     text-align: center;
 }
 
+/* Default styling for in-text links inside the main content area only
+   (e.g. links inside paragraphs on About, FAQ, etc.). Scoped to #content
+   so header/nav, footer, buttons, badges, and the menu sub-nav are
+   untouched. */
+#content a {
+    color: #8B5A3A;
+    text-decoration: underline;
+}
+
+#content a:hover {
+    color: #6F3F28;
+}
+
+#content a:visited {
+    color: #8B5A3A;
+}
+
 header {
     padding: 10px 0;
     display: flex;
@@ -403,8 +420,18 @@ html {
     margin-top: 4px !important;
 }
 
-.menu-item-special {
-    border-color: #8B5A3A;
+.menu-tag-special {
+    display: inline-block;
+    background-color: #8B5A3A;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
 }
 
 @media (max-width: 600px) {
