@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thank You - Knead & Crumbs</title>
+
+    <!-- Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH4FNZL4CB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FH4FNZL4CB');
+    </script>
+</head>
+<body>
+    <!-- Header will load here -->
+    <div id="header"></div>
+
+    <!-- Content -->
+    <div class="section" id="content">
+        <div class="thankyou-box">
+            <i class="fa-solid fa-circle-check thankyou-icon"></i>
+            <h2>Thank You for Your Message!</h2>
+            <p style="text-align:center;">We've received your note and will get back to you within 1-2 business days. In the meantime, feel free to take a look around.</p>
+        </div>
+    </div>
+
+    <!-- Footer will load here -->
+    <div id="footer"></div>
+
+    <!-- JavaScript to load header/footer -->
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            document.getElementById(id).innerHTML = await response.text();
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+</html>

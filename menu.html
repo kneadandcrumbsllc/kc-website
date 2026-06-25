@@ -7,9 +7,9 @@
 
     <!-- Font Awesome Free CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH4FNZL4CB"></script>
     <script>
@@ -25,31 +25,114 @@
     <!-- Header will load here -->
     <div id="header"></div>
 
-    <!-- Content Section -->
+    <!-- Page heading -->
     <div class="section" id="content">
         <h2>Menu</h2>
-        <p>
-			<b>Weekly Menu</b><br/>
-			Bagels: Plain, Poppy, Sesame, Everything, Onion, Garlic, Asiago<br/>
-			<i>contains: wheat, sesame</i><br/>
-<br/>
-			Blueberry Muffin<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			Mocha Muffin<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			Chocolate Chip Cookies<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			<b>🍁 October Specials 👻🎃️</b><br/>
-            Pumpkin Chocolate Chip Muffin<br/>
-			<i>contains: wheat, egg, milk, soy</i><br/>
-<br />
-			Pumpkin Cinnamon Roll<br/>
-			<i>contains: wheat, egg, milk</i><br/>
-		</p>
+        <p>Find your market below, or scroll down to see everything we bake.</p>
     </div>
+
+    <!-- Sticky jump nav -->
+    <nav class="menu-subnav" aria-label="Menu sections">
+        <a href="#suffield">Suffield Farmer's Market</a>
+        <a href="#colchester">Colchester Farmer's Market</a>
+        <a href="#other-offerings">Other Offerings</a>
+    </nav>
+
+    <!-- SUFFIELD MARKET MENU -->
+    <section class="menu-section" id="suffield">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-location-dot"></i> Suffield Farmer's Market</h2>
+            <!-- TODO: Replace with the exact Suffield Farmer's Market address/location -->
+            <p class="menu-location">123 Main Street, Suffield, CT &middot; Saturdays, 9am&ndash;12pm</p>
+            <!-- TODO: Update with Suffield-specific items/days if they differ from Colchester -->
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Bagels</h3>
+                    <p>Plain, Poppy, Sesame, Everything, Onion, Garlic, Asiago</p>
+                    <p class="menu-allergens">contains: wheat, sesame</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Blueberry Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mocha Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item menu-item-special">
+                    <h3>🍁 October Special: Pumpkin Chocolate Chip Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, milk, soy</p>
+                </div>
+                <div class="menu-item menu-item-special">
+                    <h3>🎃 October Special: Pumpkin Cinnamon Roll</h3>
+                    <p class="menu-allergens">contains: wheat, egg, milk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLCHESTER MARKET MENU -->
+    <section class="menu-section menu-section-alt" id="colchester">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-location-dot"></i> Colchester Farmer's Market</h2>
+            <!-- TODO: Replace with the exact Colchester Farmer's Market address/location -->
+            <p class="menu-location">456 Town Green, Colchester, CT &middot; Sundays, 10am&ndash;1pm</p>
+            <!-- TODO: Update with Colchester-specific items/days if they differ from Suffield -->
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Bagels</h3>
+                    <p>Plain, Poppy, Sesame, Everything, Onion, Garlic, Asiago</p>
+                    <p class="menu-allergens">contains: wheat, sesame</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Blueberry Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mocha Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <p class="menu-allergens">contains: wheat, egg, soy, milk</p>
+                </div>
+                <div class="menu-item menu-item-special">
+                    <h3>🍁 October Special: Pumpkin Chocolate Chip Muffin</h3>
+                    <p class="menu-allergens">contains: wheat, egg, milk, soy</p>
+                </div>
+                <div class="menu-item menu-item-special">
+                    <h3>🎃 October Special: Pumpkin Cinnamon Roll</h3>
+                    <p class="menu-allergens">contains: wheat, egg, milk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER OFFERINGS -->
+    <section class="menu-section" id="other-offerings">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-cake-candles"></i> Other Offerings</h2>
+            <p>Beyond our weekly market menu, we also take on:</p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Custom Cakes &amp; Cupcakes</h3>
+                    <p>Decorated for birthdays, showers, and other celebrations.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Dessert Tables</h3>
+                    <p>Mixed boxes of cookies, bars, and bites for parties and events.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Challah</h3>
+                    <p>Available by request &mdash; ask about current flavors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer will load here -->
     <div id="footer"></div>
