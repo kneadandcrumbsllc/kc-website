@@ -7,9 +7,9 @@
 
     <!-- Font Awesome Free CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH4FNZL4CB"></script>
     <script>
@@ -25,31 +25,117 @@
     <!-- Header will load here -->
     <div id="header"></div>
 
-    <!-- Content Section -->
+    <!-- Page heading -->
     <div class="section" id="content">
         <h2>Menu</h2>
-        <p>
-			<b>Weekly Menu</b><br/>
-			Bagels: Plain, Poppy, Sesame, Everything, Onion, Garlic, Asiago<br/>
-			<i>contains: wheat, sesame</i><br/>
-<br/>
-			Blueberry Muffin<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			Mocha Muffin<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			Chocolate Chip Cookies<br/>
-			<i>contains: wheat, egg, soy, milk</i><br/>
-<br/>
-			<b>🍁 October Specials 👻🎃️</b><br/>
-            Pumpkin Chocolate Chip Muffin<br/>
-			<i>contains: wheat, egg, milk, soy</i><br/>
-<br />
-			Pumpkin Cinnamon Roll<br/>
-			<i>contains: wheat, egg, milk</i><br/>
-		</p>
+        <p style="text-align:center;">Find your market below, or scroll down to see everything else we bake.</p>
     </div>
+
+    <!-- Sticky jump nav -->
+    <nav class="menu-subnav" aria-label="Menu sections">
+        <a href="#suffield">Suffield Farmer's Market</a>
+        <a href="#colchester">Colchester Farmer's Market</a>
+        <a href="#other-offerings">Other Offerings</a>
+    </nav>
+
+    <!-- SUFFIELD MARKET MENU -->
+    <section class="menu-section" id="suffield">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-location-dot"></i> Suffield Farmer's Market</h2>
+            <p class="menu-location">Suffield Town Green - South, 2 High St, Suffield, CT 06078 &middot; Saturdays, 9am&ndash;12pm</p>
+            <!-- Updated from promotional email -->
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Authentic NY-Style Bagels</h3>
+                    <p>Plain, Everything, Sesame, Poppy, Garlic, Onion, Asiago</p>
+                    <p class="menu-allergens">contains: wheat; sesame &amp; poppy seeds in some varieties; dairy in Asiago</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Challah</h3>
+                    <p>Loaves and Rolls</p>
+                    <p class="menu-allergens">contains: wheat, egg, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Sweet Breads</h3>
+                    <p>Chocolate Chip Banana Bread, Lemon Loaf <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Cookies</h3>
+                    <p>Chocolate Chip, Rainbow Sprinkle <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy, soy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLCHESTER MARKET MENU -->
+    <section class="menu-section menu-section-alt" id="colchester">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-location-dot"></i> Colchester Farmer's Market</h2>
+            <p class="menu-location">Colchester Town Green, 98 Hayward Ave, Colchester, CT 06415 &middot; Sundays, 9am&ndash;1pm</p>
+            <!-- Updated from promotional email -->
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Authentic NY-Style Bagels</h3>
+                    <p>Plain, Everything, Sesame, Poppy, Garlic, Onion, Asiago</p>
+                    <p class="menu-allergens">contains: wheat; sesame &amp; poppy seeds in some varieties; dairy in Asiago</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Challah</h3>
+                    <p>Loaves and Rolls</p>
+                    <p class="menu-allergens">contains: wheat, egg, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Sweet Breads</h3>
+                    <p>Chocolate Chip Banana Bread, Lemon Loaf <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Cookies</h3>
+                    <p>Chocolate Chip, Rainbow Sprinkle <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Sweet Rolls</h3>
+                    <p>Cinnamon Rolls, Coffee Rolls, Lemon Meringue Rolls <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Jumbo Muffins</h3>
+                    <p>Blueberry Lemon Muffins <span class="menu-tag-special">Special</span></p>
+                    <p class="menu-allergens">contains: wheat, egg, dairy, soy</p>
+                </div>
+                <div class="menu-item">
+                    <h3>🤫 Secret Menu Item</h3>
+                    <p>Come visit us to find out!</p>
+                    <p class="menu-allergens">ask us in person for ingredients/allergens</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER OFFERINGS -->
+    <section class="menu-section" id="other-offerings">
+        <div class="menu-section-inner">
+            <h2><i class="fa-solid fa-cake-candles"></i> Other Offerings</h2>
+            <p>Beyond our weekly market menu, we also take on:</p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>NY-Style Rotating Bagel Specials</h3>
+                    <p>Egg, Egg Everything, Rainbow &mdash; more to follow!</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Custom Cupcakes</h3>
+                    <p>Decorated for birthdays, showers, and other celebrations.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Dessert Boxes</h3>
+                    <p>Mixed boxes of cookies, bars, and bites for parties and events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer will load here -->
     <div id="footer"></div>

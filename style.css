@@ -6,6 +6,23 @@ body {
     text-align: center;
 }
 
+/* Default styling for in-text links inside the main content area only
+   (e.g. links inside paragraphs on About, FAQ, etc.). Scoped to #content
+   so header/nav, footer, buttons, badges, and the menu sub-nav are
+   untouched. */
+#content a {
+    color: #8B5A3A;
+    text-decoration: underline;
+}
+
+#content a:hover {
+    color: #6F3F28;
+}
+
+#content a:visited {
+    color: #8B5A3A;
+}
+
 header {
     padding: 10px 0;
     display: flex;
@@ -296,3 +313,137 @@ footer p {
     right: 10px;
 }
 
+
+/* ===== Menu page: market sections + sticky jump nav ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-subnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: #63402C;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-subnav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-subnav a:hover {
+    background-color: #fbe9ef;
+    color: #63402C;
+}
+
+.menu-section {
+    scroll-margin-top: 60px;
+    padding: 50px 20px;
+}
+
+.menu-section-alt {
+    background-color: #fff5f7;
+}
+
+.menu-section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.menu-section-inner h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-section-inner h2 i {
+    color: #8B5A3A;
+    margin-right: 8px;
+}
+
+.menu-location {
+    text-align: center;
+    font-size: 0.95em;
+    color: #8B5A3A;
+    margin: 0 0 20px 0;
+}
+
+.menu-section-inner > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #e7c9d3;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.menu-section-alt .menu-item {
+    background-color: #fff;
+}
+
+.menu-item h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+    color: #63402C;
+}
+
+.menu-item p {
+    margin: 0;
+}
+
+.menu-allergens {
+    font-style: italic;
+    font-size: 0.88em;
+    color: #8B5A3A;
+    margin-top: 4px !important;
+}
+
+.menu-tag-special {
+    display: inline-block;
+    background-color: #8B5A3A;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+@media (max-width: 600px) {
+    .menu-subnav {
+        gap: 6px;
+        padding: 8px;
+    }
+    .menu-subnav a {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+    .menu-section {
+        padding: 36px 16px;
+    }
+}

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us - Knead & Crumbs</title>
 
     <!-- Font Awesome Free CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH4FNZL4CB"></script>
     <script>
@@ -21,28 +22,68 @@
     </script>
 </head>
 <body>
-
     <!-- Header will load here -->
     <div id="header"></div>
 
-    <!-- Content Section -->
+    <!-- Content -->
     <div class="section" id="content">
-        <h2>Contact Us</h2>
-        <p>Contact us at our social media accounts or email address below.</p>
+    <h2>Contact Us</h2>
+    <p style="text-align:left;">Questions, custom orders, or feedback? Send us a note below and we’ll get back to you.</p>
+
+    <div class="contact-form" style="margin-top:15px; display:flex; justify-content:center;">
+      <form action="https://formsubmit.co/kneadandcrumbsllc@gmail.com" method="POST" class="contact-form-inner"
+            style="width:100%; max-width:600px; background:#fff5f7; border-radius:10px; padding:24px; box-sizing:border-box; text-align:left; display:flex; flex-direction:column; gap:18px;">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New message from Knead & Crumbs website">
+        <input type="hidden" name="_template" value="box">
+        <!-- Redirect after success -->
+        <input type="hidden" name="_next" value="https://kneadandcrumbs.com/contact-thankyou.html">
+
+        <!-- Honeypot (spam protection) -->
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-row-group" style="display:flex; gap:18px; flex-wrap:wrap;">
+          <div class="form-row" style="display:flex; flex-direction:column; flex:1 1 200px; min-width:0;">
+            <label for="email" style="display:block; margin:0 0 6px; font-weight:600; color:#63402C;">Your Email</label>
+            <input id="email" type="email" name="email" placeholder="you@example.com" required
+                   style="width:100%; padding:10px 12px; border:1px solid #63402C; border-radius:6px; font-size:1rem; font-family:inherit; box-sizing:border-box; background:#fff; color:#63402C;">
+          </div>
+
+          <div class="form-row" style="display:flex; flex-direction:column; flex:1 1 200px; min-width:0;">
+            <label for="subject" style="display:block; margin:0 0 6px; font-weight:600; color:#63402C;">Subject</label>
+            <input id="subject" type="text" name="subject" placeholder="What's this about?" required
+                   style="width:100%; padding:10px 12px; border:1px solid #63402C; border-radius:6px; font-size:1rem; font-family:inherit; box-sizing:border-box; background:#fff; color:#63402C;">
+          </div>
+        </div>
+
+        <div class="form-row" style="display:flex; flex-direction:column;">
+          <label for="message" style="display:block; margin:0 0 6px; font-weight:600; color:#63402C;">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us more…" required
+                    style="width:100%; padding:10px 12px; border:1px solid #63402C; border-radius:6px; font-size:1rem; font-family:inherit; box-sizing:border-box; background:#fff; color:#63402C; resize:vertical; min-height:120px;"></textarea>
+        </div>
+
+        <!-- Optional autoresponse to sender -->
+        <!-- <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Knead & Crumbs! We received your message and will reply soon."> -->
+
+        <div class="form-actions" style="display:flex; justify-content:flex-end;">
+          <button type="submit" style="background-color:#63402C; color:#fff; border:none; padding:12px 28px; border-radius:6px; cursor:pointer; font-size:1rem; font-weight:bold;">Send Message</button>
+        </div>
+      </form>
+    </div>
     </div>
 
     <!-- Footer will load here -->
     <div id="footer"></div>
 
-    <!-- JavaScript to load header/footer -->
+    <!-- Load shared header/footer -->
     <script>
         async function loadComponent(id, file) {
-            const response = await fetch(file);
-            document.getElementById(id).innerHTML = await response.text();
+            const res = await fetch(file);
+            document.getElementById(id).innerHTML = await res.text();
         }
         loadComponent("header", "header.html");
         loadComponent("footer", "footer.html");
     </script>
-
 </body>
 </html>
